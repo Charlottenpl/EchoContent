@@ -259,3 +259,8 @@ func Close() error {
 	}
 	return nil
 }
+
+// Background 返回背景上下文
+func Background() context.Context {
+	return context.Background()
+}
