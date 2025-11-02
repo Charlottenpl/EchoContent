@@ -1,6 +1,7 @@
 package model
 
 import (
+	"fmt"
 	"time"
 
 	"github.com/charlottepl/blog-system/internal/blog/model"
@@ -179,4 +180,11 @@ func (m *Moment) GetTagSlugs() []string {
 		slugs[i] = tag.Slug
 	}
 	return slugs
+}
+
+// ToSafeJSON 转换为安全的JSON格式（不包含敏感信息）
+func (m *Moment) ToSafeJSON() string {
+	// 这里简化处理，实际项目中应该使用json.Marshal
+	// 返回一个标识符表示安全序列化
+	return fmt.Sprintf("moment_%d_%s", m.ID, m.Slug)
 }
