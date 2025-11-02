@@ -22,7 +22,9 @@
       "WebFetch(domain:halo.run)",
       "WebFetch(domain:blog.golang.org)",
       "WebFetch(domain:docs.halo.run)",
-      "Bash(go mod download:*)"
+      "Bash(go mod download:*)",
+      "Bash(git commit:*)",
+      "Bash(git add:*)"
     ],
     "deny": []
   }
