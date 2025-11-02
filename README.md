@@ -16,12 +16,12 @@ EchoContent 是一个基于上下文工程的基础工程脚手架，旨在通�
 
 ```mermaid
 graph TD
-    A[需求输入] --> B[/generate-prp]
+    A[需求输入] --> B[generate-prp命令]
     B --> C[需求澄清]
     C --> D[需求确认]
     D --> E[技术方案设计]
     E --> F[方案确认]
-    F --> G[/execute-prp]
+    F --> G[execute-prp命令]
     G --> H[需求列表创建]
     H --> I[需求列表确认]
     I --> J[任务拆分]
