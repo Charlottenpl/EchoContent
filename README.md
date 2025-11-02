@@ -1,11 +1,9 @@
-# 博客管理系统
+# Blog System
 
 [![Go Version](https://img.shields.io/badge/Go-1.21+-blue.svg)](https://golang.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Build Status](https://github.com/your-org/blog-system/workflows/CI/badge.svg)](https://github.com/your-org/blog-system/actions)
-[![Coverage](https://codecov.io/gh/your-org/blog-system/branch/main/graph/badge.svg)](https://codecov.io/gh/your-org/blog-system)
 
-一个使用Go语言开发的轻量级博客管理系统，支持博客文章、随念（类似微博）、图床等功能，参考HALO系统设计理念，专为个人博客和小团队设计。
+一个基于Go语言开发的现代化博客管理系统，支持文章发布、随念分享、评论互动和媒体管理等功能。
 
 ## ✨ 特性
 
@@ -63,24 +61,60 @@
 - Git 2.0+
 - Docker (可选)
 
-### 本地开发
+## 🚀 快速开始
+
+### 环境要求
+
+- Go 1.21+
+- Git
+
+### 安装步骤
+
+1. **克隆项目**
+   ```bash
+   git clone https://github.com/charlottepl/blog-system.git
+   cd blog-system
+   ```
+
+2. **安装依赖**
+   ```bash
+   make deps
+   ```
+
+3. **创建必要目录**
+   ```bash
+   make setup
+   ```
+
+4. **运行应用**
+   ```bash
+   make run
+   ```
+
+5. **访问应用**
+   打开浏览器访问 http://localhost:8080
+
+### 使用Makefile
 
 ```bash
-# 1. 克隆项目
-git clone https://github.com/your-org/blog-system.git
-cd blog-system
+# 开发命令
+make deps          # 安装依赖
+make run           # 运行应用
+make dev           # 开发模式运行
+make build         # 构建应用
 
-# 2. 安装依赖
-go mod download
+# 测试命令
+make test          # 运行测试
+make test-cover    # 生成覆盖率报告
+make lint          # 代码检查
 
-# 3. 复制配置文件
-cp configs/config.example.yaml configs/config.yaml
+# 数据库命令
+make migrate       # 运行数据库迁移
+make setup         # 创建必要目录
 
-# 4. 初始化数据库
-make migrate
-
-# 5. 启动开发服务器
-make dev
+# 清理命令
+make clean         # 清理构建文件
+make clean-all     # 清理所有生成文件
 ```
 
 ### Docker 部署
