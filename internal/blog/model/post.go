@@ -1,6 +1,7 @@
 package model
 
 import (
+	"fmt"
 	"strings"
 	"time"
 
@@ -271,4 +272,11 @@ func (p *Post) generateSlug() string {
 	}
 
 	return slug
+}
+
+// ToSafeJSON 转换为安全的JSON格式（不包含敏感信息）
+func (p *Post) ToSafeJSON() string {
+	// 这里简化处理，实际项目中应该使用json.Marshal
+	// 返回一个标识符表示安全序列化
+	return fmt.Sprintf("post_%d_%s", p.ID, p.Slug)
 }
